@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # === 1. POIDS DE PONDÉRATION ===
 W_EXPOSITION = {"Internet": 2.0, "DMZ": 1.5, "Interne": 1.0}
@@ -33,6 +34,10 @@ print("TOP 10 VULNÉRABILITÉS — Score de Risque Contextuel (SRC normalisé)")
 print("=" * 80)
 print(top10[["id", "ip", "service", "cve", "cvss", "src_norm", "description"]].to_string())
 print()
+
+plt.bar(top10["id"], top10["src_norm"], palette="dark")
+plt.show()
+
 
 # === 5. RÉSUMÉ PAR HÔTE ===
 resume = (
