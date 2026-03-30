@@ -1,0 +1,36 @@
+id,ip,port,service,version,cvss,cve,epss,exposition,criticite,donnees,description,kev
+V01,10.0.0.10,443,OpenSSL,1.0.1,10.0,CVE-2014-0160,0.97,Internet,Critique,Sensible,Heartbleed — fuite mémoire SSL pouvant exposer clés privées et données clients,1
+V02,10.0.0.10,80,Apache,2.4.49,9.8,CVE-2021-41773,0.96,Internet,Critique,Sensible,Path traversal et RCE sans authentification sur Apache 2.4.49,1
+V03,10.0.0.10,22,OpenSSH,7.4,7.8,CVE-2018-15473,0.12,Internet,Critique,Sensible,Enumération des noms d'utilisateurs valides via timing SSH,0
+V04,10.0.0.10,8443,Node.js,14.0,8.1,CVE-2021-22931,0.08,Internet,Critique,Sensible,Corruption mémoire dans le runtime Node.js — potentiel RCE,0
+V05,10.0.0.15,5432,PostgreSQL,12.3,10.0,-,0.45,Interne,Critique,Sensible,Compte postgres sans mot de passe — accès root à la base de données de paiement,0
+V06,10.0.0.15,5432,PostgreSQL,12.3,8.8,CVE-2019-10164,0.09,Interne,Critique,Sensible,Dépassement de tampon dans pg_dump — escalade de privilèges possible,0
+V07,10.0.0.15,5432,PostgreSQL,12.3,6.5,CVE-2020-25695,0.04,Interne,Critique,Sensible,Injection SQL via ALTER TABLE — nécessite compte authentifié,0
+V08,10.0.0.20,80,Nginx,1.14,7.5,CVE-2019-20372,0.06,Internet,Élevée,Interne,Lecture de fichiers hors racine web via requêtes HTTP malformées,0
+V09,10.0.0.20,443,Nginx,1.14,5.3,CVE-2022-41741,0.03,Internet,Élevée,Interne,Corruption mémoire dans le module mp4 — déni de service,0
+V10,10.0.0.20,22,OpenSSH,7.4,7.8,CVE-2018-15473,0.12,Internet,Élevée,Interne,Enumération des noms d'utilisateurs valides via timing SSH,0
+V11,10.0.0.25,8080,Keycloak,12.0,9.8,CVE-2021-3461,0.14,DMZ,Critique,Sensible,Contournement d'authentification SSO via token mal validé,0
+V12,10.0.0.25,8080,Keycloak,12.0,8.1,CVE-2020-1714,0.09,DMZ,Critique,Sensible,Injection de code côté serveur via template Freemarker,0
+V13,10.0.0.25,8443,Keycloak,12.0,6.1,CVE-2022-2668,0.02,DMZ,Critique,Sensible,XSS stocké dans la console d'administration Keycloak,0
+V14,10.0.0.30,80,Apache,2.4.29,9.8,CVE-2021-41773,0.96,Interne,Élevée,Interne,Path traversal RCE — même version vulnérable que le serveur de production,1
+V15,10.0.0.30,80,Apache,2.4.29,7.5,CVE-2017-7679,0.07,Interne,Élevée,Interne,Dépassement de tampon dans mod_mime — déni de service ou RCE,0
+V16,10.0.0.30,3306,MySQL,5.7,8.8,CVE-2016-6662,0.11,Interne,Élevée,Interne,Injection SQL permettant l'exécution de commandes système en root,0
+V17,10.0.0.30,22,OpenSSH,6.7,9.8,CVE-2016-6515,0.05,Interne,Élevée,Interne,Déni de service par authentification massive — pas de rate limiting,0
+V18,10.0.0.35,25,Postfix,3.4,5.3,CVE-2020-12063,0.03,DMZ,Moyenne,Public,SMTP open relay — le serveur peut être utilisé pour envoyer du spam,0
+V19,10.0.0.35,25,Postfix,3.4,6.1,CVE-2021-38296,0.02,DMZ,Moyenne,Public,Injection d'en-têtes SMTP permettant l'usurpation d'expéditeur,0
+V20,10.0.0.35,587,Postfix,3.4,4.3,-,0.01,DMZ,Moyenne,Public,Port SMTP submission ouvert sans authentification obligatoire,0
+V21,10.0.0.40,443,pfSense,2.5,9.8,CVE-2021-41282,0.08,Internet,Critique,Interne,Injection de commandes shell dans l'interface d'administration pfSense,1
+V22,10.0.0.40,80,pfSense,2.5,8.8,CVE-2022-31814,0.05,Internet,Critique,Interne,CSRF permettant la modification de règles firewall sans authentification,0
+V23,10.0.0.40,22,OpenSSH,8.1,7.8,CVE-2023-38408,0.07,Internet,Critique,Interne,RCE via agent SSH forwarding dans OpenSSH < 9.3,0
+V24,10.0.0.40,443,pfSense,2.5,6.5,CVE-2021-41281,0.03,Internet,Critique,Interne,XSS réfléchi dans l'interface web — vol de session administrateur,0
+V25,10.0.0.45,3000,Grafana,8.0,9.8,CVE-2021-43798,0.92,Interne,Moyenne,Interne,Path traversal permettant la lecture de fichiers système arbitraires,1
+V26,10.0.0.45,3000,Grafana,8.0,8.1,CVE-2022-21702,0.06,Interne,Moyenne,Interne,XSS stocké via les annotations de dashboard — persistant après redémarrage,0
+V27,10.0.0.45,3000,Grafana,8.0,6.5,CVE-2022-21703,0.04,Interne,Moyenne,Interne,CSRF dans l'API Grafana — modification de dashboards à distance,0
+V28,10.0.0.50,9101,Bacula,9.4,7.2,CVE-2020-11061,0.03,Interne,Élevée,Sensible,Injection de commandes dans le Director Bacula — accès aux sauvegardes,0
+V29,10.0.0.50,9102,Bacula,9.4,6.8,-,0.02,Interne,Élevée,Sensible,Authentification MD5 faible entre composants Bacula — brute-force possible,0
+V30,10.0.0.50,22,OpenSSH,7.9,5.3,CVE-2019-6111,0.04,Interne,Élevée,Sensible,Ecriture arbitraire de fichiers via scp — nécessite accès SSH,0
+V31,10.0.0.55,80,Apache,2.4.41,7.5,CVE-2020-11993,0.05,Interne,Faible,Public,Déni de service via requêtes HTTP/2 malformées sur mod_http2,0
+V32,10.0.0.55,3306,MySQL,8.0,6.5,CVE-2021-2144,0.03,Interne,Faible,Public,Élévation de privilèges locale via la procédure stockée système,0
+V33,10.0.0.55,22,OpenSSH,8.2,5.5,CVE-2021-28041,0.02,Interne,Faible,Public,Double free dans ssh-agent — crash possible en cas d'agent forwarding,0
+V34,10.0.0.10,10250,Kubernetes API,1.19,9.8,CVE-2020-8554,0.11,Internet,Critique,Sensible,Man-in-the-middle via ExternalIP services — interception du trafic cluster,0
+V35,10.0.0.25,8080,Confluence,7.13,10.0,CVE-2023-22527,0.94,Interne,Moyenne,Interne,RCE via injection de template OGNL — exploit public disponible,1
