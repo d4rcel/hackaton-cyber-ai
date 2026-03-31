@@ -35,7 +35,12 @@ print("=" * 80)
 print(top10[["id", "ip", "service", "cve", "cvss", "src_norm", "description"]].to_string())
 print()
 
-plt.bar(top10["id"], top10["src_norm"], palette="dark")
+plt.figure(figsize=(10, 5))
+plt.bar(top10["id"], top10["src_norm"], color=plt.cm.Dark2.colors[: len(top10)])
+plt.title("Top 10 des vulnérabilités par SRC V1")
+plt.xlabel("ID vulnérabilité")
+plt.ylabel("SRC normalisé")
+plt.tight_layout()
 plt.show()
 
 
