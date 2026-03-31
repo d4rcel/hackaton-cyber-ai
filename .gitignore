@@ -5,6 +5,6 @@
 .codex
 aaanalyse.py
 rapport.html
- .~lock.presentation.pptx#
-        generate_pptx.py
-        presentation.pptx
+.~lock.presentation.pptx#
+generate_pptx.py
+presentation.pptx
